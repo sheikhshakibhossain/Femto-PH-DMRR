@@ -1,0 +1,35 @@
+
+==========================================================
+FEMTO-WINDOW SCHEDULER: FINAL PERFORMANCE ANALYSIS REPORT
+==========================================================
+Dataset Analysis: 6 Simulation Runs (10 to 400 Processes)
+Analysis Baseline: Maximum System Load (400 Processes)
+
+1. EFFICIENCY ANALYSIS (Overhead Reduction)
+   vs Round Robin (Q=5):
+   - RR(Q=5) Context Switches: 32299
+   - Femto Context Switches:   6682
+   -------------------------------------------------------
+   >>> RESULT: Femto reduced system overhead by 79.31%
+   
+2. RESPONSIVENESS ANALYSIS (User Experience)
+   vs Round Robin (Q=20):
+   - RR(Q=20) Avg Response:    2912.6 ticks
+   - Femto Avg Response:       1104.4 ticks
+   -------------------------------------------------------
+   >>> RESULT: Femto is 62.08% faster to respond than RR(20).
+
+3. THEORETICAL OPTIMALITY
+   vs SRTF (Preemptive Shortest Job First - "God Mode"):
+   - SRTF Avg Wait Time:       88479.8 ticks
+   - Femto Avg Wait Time:      125240.1 ticks
+   -------------------------------------------------------
+   >>> RESULT: Femto is within 41.55% of the theoretical limit
+               without knowing burst times in advance.
+
+4. SCALABILITY CONCLUSION
+   Under heavy load, Femto-Window successfully identifies 'Stable' 
+   processes and scales the Time Quantum, avoiding the thrashing 
+   seen in RR(Q=5) while maintaining the interactivity missing 
+   in RR(Q=20).
+==========================================================
