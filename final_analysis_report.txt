@@ -7,24 +7,24 @@ Analysis Baseline: Maximum System Load (400 Processes)
 
 1. EFFICIENCY ANALYSIS (Overhead Reduction)
    vs Round Robin (Q=5):
-   - RR(Q=5) Context Switches: 32299
-   - Femto Context Switches:   6682
+   - RR(Q=5) Context Switches: 31611
+   - Femto Context Switches:   6594
    -------------------------------------------------------
-   >>> RESULT: Femto reduced system overhead by 79.31%
+   >>> RESULT: Femto reduced system overhead by 79.14%
    
 2. RESPONSIVENESS ANALYSIS (User Experience)
    vs Round Robin (Q=20):
-   - RR(Q=20) Avg Response:    2912.6 ticks
-   - Femto Avg Response:       1104.4 ticks
+   - RR(Q=20) Avg Response:    2959.3 ticks
+   - Femto Avg Response:       1115.0 ticks
    -------------------------------------------------------
-   >>> RESULT: Femto is 62.08% faster to respond than RR(20).
+   >>> RESULT: Femto is 62.32% faster to respond than RR(20).
 
 3. THEORETICAL OPTIMALITY
    vs SRTF (Preemptive Shortest Job First - "God Mode"):
-   - SRTF Avg Wait Time:       88479.8 ticks
-   - Femto Avg Wait Time:      125240.1 ticks
+   - SRTF Avg Wait Time:       87251.6 ticks
+   - Femto Avg Wait Time:      123869.7 ticks
    -------------------------------------------------------
-   >>> RESULT: Femto is within 41.55% of the theoretical limit
+   >>> RESULT: Femto is within 41.97% of the theoretical limit
                without knowing burst times in advance.
 
 4. SCALABILITY CONCLUSION
